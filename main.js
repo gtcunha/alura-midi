@@ -6,14 +6,14 @@ function tocaSomPom () {
 
 / Comando para ação do botão Pom /
 
-/ document.querySelector('.tecla_pom').onclick = tocaSomPom; /
+document.querySelector('.tecla_pom').onclick = tocaSomPom; 
 
 const listaDeTeclas = document.querySelectorAll('.tecla');
-const listaDeSons = document.querySelectorAll('.som_tecla_pom');
+/ const listaDeSons = document.querySelectorAll('.som_tecla_pom'); /
 
 
-for (var cont=0; cont <9; cont++) {
+/*for (var cont=0; cont <9; cont++) {
 
 }
 
-
+*/
