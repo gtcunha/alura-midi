@@ -1,21 +1,22 @@
-/ Arquivo da Branch desenvolvimento /
+// Arquivo da Branch desenvolvimento 
 
-/ Função para tecla Pom /
+// Função para tecla Pom 
 
 function tocaSomPom () {
     document.querySelector('#som_tecla_pom').play();
 } 
 
-/ Comando para ação do botão Pom /
+// Comando para ação do botão Pom 
 
-document.querySelector('.tecla_pom').onclick = tocaSomPom; 
-
-const listaDeTeclas = document.querySelectorAll('.tecla');
-/ const listaDeSons = document.querySelectorAll('.som_tecla_pom'); /
+// document.querySelector('.tecla_pom').onclick = tocaSomPom; 
 
 
-/*for (var cont=0; cont <9; cont++) {
 
+// const listaDeSons = document.querySelectorAll('.som_tecla_pom'); 
+
+while (){
+    const listaDeTeclas = document.querySelectorAll('.tecla');
 }
 
-*/
+
+
