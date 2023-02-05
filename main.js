@@ -1,21 +1,42 @@
-// Arquivo da Branch desenvolvimento 
+// Arquivo da Branch desenvolvimento.
 
-// Função para tecla Pom 
+// Função para reproduzir o som das teclas.
 
-function tocaSomPom () {
-    document.querySelector('#som_tecla_pom').play();
+function tocaSom (idElementoAudio) {
+    document.querySelector(idElementoAudio).play();
 } 
 
-// Comando para ação do botão Pom 
-
-// document.querySelector('.tecla_pom').onclick = tocaSomPom; 
-
+//Montando um lista com a classe .tecla do html.
+const listaDeTeclas = document.querySelectorAll('.tecla');
 
 
-// const listaDeSons = document.querySelectorAll('.som_tecla_pom'); 
+//Declarando o contador da estrutura de acesso a lista.
+let contador = 0;
 
-while (){
-    const listaDeTeclas = document.querySelectorAll('.tecla');
+
+//Acesso a lista de teclas:
+
+//While para iniciar a estrutura de repetição enquanto o contador for menor que o tamanho da lista.
+while (contador < listaDeTeclas.length) {
+
+//Constante declarada para armazenar o valor dentro da posição referente ao contador. Serve para deixar o código mais limpo.
+    const tecla = listaDeTeclas[contador];
+
+//Constante declarada para informar a posição da segunda classe dos botões no html.
+    const instrumento = tecla.classList[1];
+
+//Constante declarada para atribuir o valor inicial fixo do ID com o valor variável do instrumento.
+    const idAudio = `#som_${instrumento}`;
+
+//Função para execução a tag de áudio de acordo com o seu ID.
+    tecla.onclick = function () {
+        tocaSom(idAudio);
+    }
+    
+//Contador para atualização da posição na lista.
+    contador++;
+
+    
 }
 
 
