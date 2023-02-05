@@ -10,12 +10,13 @@ function tocaSom (idElementoAudio) {
 const listaDeTeclas = document.querySelectorAll('.tecla');
 
 
-//Declarando o contador da estrutura de acesso a lista.
-let contador = 0;
+//Declarando o contador da estrutura de acesso a lista usando o While.
+//let contador = 0;
 
 
-//Acesso a lista de teclas:
+//Acesso a lista de teclas com o While:
 
+/*
 //While para iniciar a estrutura de repetição enquanto o contador for menor que o tamanho da lista.
 while (contador < listaDeTeclas.length) {
 
@@ -37,6 +38,26 @@ while (contador < listaDeTeclas.length) {
     contador++;
 
     
+}
+*/
+
+//Acesso a lista de teclas com o For:
+
+for (let contador = 0 ; contador < listaDeTeclas.length ; contador++) {
+//Constante declarada para armazenar o valor dentro da posição referente ao contador. Serve para deixar o código mais limpo.
+    const tecla = listaDeTeclas[contador];
+
+//Constante declarada para informar a posição da segunda classe dos botões no html.
+    const instrumento = tecla.classList[1];
+
+//Constante declarada para atribuir o valor inicial fixo do ID com o valor variável do instrumento.
+    const idAudio = `#som_${instrumento}`; // template string.
+
+//Função para execução a tag de áudio de acordo com o seu ID.
+    tecla.onclick = function () {
+        tocaSom(idAudio);
+    }
+
 }
 
 
